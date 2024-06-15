@@ -31,7 +31,8 @@ Sports-Facility-Booking-Platform
 - User login with JWT authentication
 - Middleware for authentication
 - Error handling
-- Organized project structure
+- User can booking sports facilities
+- admin can manage facilities
 
 ## Technology Used
 - Node.js
@@ -45,7 +46,7 @@ Sports-Facility-Booking-Platform
 
 ### Prerequisites
 - Node.js (v12.x or higher)
-- npm or yarn
+- npm
 - MongoDB
 
 ### Installation
@@ -193,7 +194,7 @@ Create a `.env` file in the root directory and add the following environment var
     ```
 
 ## License
-This project is licensed under the MIT License.
+
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
