@@ -1,21 +1,26 @@
-import express, { Request, Response } from "express";
-import notFound from "./app/middlewares/notFound";
-import  globalErrorHandler  from "./app/middlewares/globalErrorHandler";
+import express, { Application } from 'express'
+import cors from 'cors'
 
-const app = express();
+import { AuthRoutes } from './app/modules/Auth/auth.route'
+import cookieParser from 'cookie-parser'
+import router from './app/routes'
+import globalErrorHandler from './app/middlewares/globalErrorHandler'
+import notFound from './app/middlewares/notFound'
 
-//parsers
-app.use(express.json());
+const app: Application = express()
 
-// app.use("/api/users", UserRoutes);
+// parsers
+app.use(express.json())
+app.use(cookieParser())
+app.use(cors({ origin: ['http://localhost:5173'] }))
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello Next!");
-});
+// application routes
+app.use('/api', router)
 
-app.use(globalErrorHandler);
+// globalErrorHandler
+app.use(globalErrorHandler)
 
-//Not Found
-app.use(notFound);
+// Not Found Route
+app.use(notFound)
 
-export default app;
+export default app
