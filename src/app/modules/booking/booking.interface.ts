@@ -1,14 +1,11 @@
-import { TFacility } from "../facilities/facilities.interface";
-import { TUser } from "../user/user.interface";
+import { Types } from 'mongoose'
 
-
-
-export type TBooking={
-  date: Date;
-  startTime: Date;
-  endTime: Date;
-  user: TUser;
-  facility: TFacility;
-  payableAmount: number;
-  isBooked: 'confirmed' | 'unconfirmed' | 'canceled';
+export type TBooking = {
+  date: Date
+  startTime: Date
+  endTime: Date
+  user: Types.ObjectId
+  facility: Types.ObjectId
+  payableAmount: number
+  isBooked: 'confirmed' | 'unconfirmed' | 'canceled'
 }
