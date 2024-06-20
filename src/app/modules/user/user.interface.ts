@@ -1,14 +1,9 @@
-// name: The name of the user.
-// email: The contact email address.
-// password: The account password (must be hashed).
-// phone: The contact phone number.
-// role: The role of the user (can be 'admin' or 'user').
-// address: The physical address.
 
 import { Model } from 'mongoose'
 import { USER_ROLE } from './user.constant'
 
 export interface TUser {
+  _id?: string
   name: string
   email: string
   password: string

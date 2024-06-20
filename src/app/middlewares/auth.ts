@@ -1,15 +1,13 @@
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import AppError from '../errors/AppError'
-import { TUserRole } from '../modules/user/user.interface'
-import { catchAsync } from '../utils/catchAsync'
-import { User } from '../modules/user/user.model'
-import config from '../config'
-
+import catchAsync from '../utils/catchAsync'
+import config from '../config/config'
+import { User } from '../modules/User/user.model'
+import { TUserRole } from '../modules/User/user.interface'
 
 export const auth = (...requiredRoles: TUserRole[]) => {
   return catchAsync(async (req, res, next) => {
     const accessToken = req.header('Authorization')?.replace('Bearer ', '')
-    console.log(accessToken)
 
     if (!accessToken) {
       throw new AppError(401, 'You are not authorized to access this route')
