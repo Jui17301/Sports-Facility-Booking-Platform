@@ -1,6 +1,8 @@
-import config from '../../config/config'
-import { TUser } from '../User/user.interface'
-import { User } from '../User/user.model'
+
+import config from '../../config'
+import { User } from '../user/user.model'
+
+import { TUser } from '../user/user.interface'
 import { TLoginUser } from './auth.interface'
 import { createToken } from './auth.utils'
 

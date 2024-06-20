@@ -1,11 +1,13 @@
-import { BookingServices } from './booking.service'
+
 import sendResponse from '../../utils/sendResponse'
 import httpStatus from 'http-status'
-import catchAsync from '../../utils/catchAsync'
 import AppError from '../../errors/AppError'
 import jwt, { JwtPayload } from 'jsonwebtoken'
-import config from '../../config/config'
-import { User } from '../User/user.model'
+import { User } from '../user/user.model'
+import { catchAsync } from '../../utils/catchAsync'
+
+import config from '../../config'
+import { BookingServices } from './booking.services'
 
 const checkAvailability = catchAsync(async (req, res) => {
   const date = req.query.date ? new Date(req.query.date as string) : new Date()

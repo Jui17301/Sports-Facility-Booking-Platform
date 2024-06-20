@@ -1,9 +1,10 @@
 import express from 'express'
-import { BookingControllers } from './booking.controller'
-import validateRequest from '../../middleware/validateRequest'
+import validateRequest from '../../middlewares/validateRequest'
 import { BookingValidations } from './booking.validation'
-import { auth } from '../../middleware/auth'
-import { USER_ROLE } from '../User/user.constant'
+import { USER_ROLE } from '../user/user.constant'
+import { auth } from '../../middlewares/auth'
+import { BookingControllers } from './booking.controller'
+
 
 const router = express.Router()
 

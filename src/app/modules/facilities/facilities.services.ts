@@ -1,5 +1,6 @@
-import { TFacility } from './facility.interface'
-import { Facility } from './facility.model'
+import { TFacility } from "./facilities.interface"
+import { Facility } from "./facilities.model"
+
 
 const createFacilityIntoDB = async (payload: TFacility) => {
   const facility = await Facility.create(payload)

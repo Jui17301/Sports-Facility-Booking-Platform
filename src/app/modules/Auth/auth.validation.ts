@@ -1,5 +1,6 @@
 import { z } from 'zod'
-import { USER_ROLE } from '../User/user.constant'
+import { USER_ROLE } from '../user/user.constant'
+
 
 const signUpSchema = z.object({
   body: z.object({

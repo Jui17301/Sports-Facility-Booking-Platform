@@ -1,7 +1,9 @@
 import httpStatus from 'http-status'
-import catchAsync from '../../utils/catchAsync'
+
 import sendResponse from '../../utils/sendResponse'
-import { FacilityServices } from './facility.service'
+import { catchAsync } from '../../utils/catchAsync'
+import { FacilityServices } from './facilities.services'
+
 
 const createFacility = catchAsync(async (req, res) => {
   const result = await FacilityServices.createFacilityIntoDB(req.body)

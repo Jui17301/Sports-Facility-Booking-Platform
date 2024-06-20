@@ -1,19 +1,21 @@
 import { ErrorRequestHandler } from 'express'
 import { ZodError } from 'zod'
-import { TErrorSource } from '../interface/error'
+
 import handleZodError from '../errors/handleZodError'
 import handleValidationError from '../errors/handleValidationError'
 import handleCastError from '../errors/handleCastError'
 import handleDuplicateError from '../errors/handleDuplicateError'
 import AppError from '../errors/AppError'
-import config from '../config/config'
+import { TErrorSources } from '../interface/error.interface'
+import config from '../config'
+
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res) => {
   // setting default values
   let statusCode = 500
   let message = 'Something went wrong'
 
-  let errorSources: TErrorSource = [
+  let errorSources: TErrorSources = [
     {
       path: '',
       message: 'Something went wrong',

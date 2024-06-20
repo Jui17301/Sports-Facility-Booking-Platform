@@ -1,9 +1,10 @@
 import express from 'express'
-import validateRequest from '../../middleware/validateRequest'
-import { auth } from '../../middleware/auth'
-import { FacilityValidations } from '../Facility/facility.validation'
-import { USER_ROLE } from '../User/user.constant'
-import { FacilityControllers } from './facility.controller'
+import { auth } from '../../middlewares/auth'
+import { USER_ROLE } from '../user/user.constant'
+import validateRequest from '../../middlewares/validateRequest'
+import { FacilityValidations } from './facilities.validation'
+import { FacilityControllers } from './facilities.controller'
+
 
 const router = express.Router()
 

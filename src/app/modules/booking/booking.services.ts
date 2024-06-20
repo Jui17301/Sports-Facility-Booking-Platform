@@ -1,4 +1,5 @@
-import { Facility } from '../Facility/facility.model'
+
+import { Facility } from '../facilities/facilities.model'
 import { TBooking } from './booking.interface'
 import { Booking } from './booking.model'
 
