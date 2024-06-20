@@ -1,10 +1,10 @@
-
-import config from '../../config'
-import { TUser } from '../user/user.interface'
-import { User } from '../user/user.model'
+import config from '../../config/config'
+import { TUser } from '../User/user.interface'
+import { User } from '../User/user.model'
 import { TLoginUser } from './auth.interface'
 import { createToken } from './auth.utils'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const signup = async (payload: TUser): Promise<any> => {
   //user existence check
   const user = await User.findOne({ email: payload.email })

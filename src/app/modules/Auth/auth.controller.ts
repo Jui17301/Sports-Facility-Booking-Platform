@@ -1,9 +1,8 @@
 import httpStatus from 'http-status'
-
+import config from '../../config/config'
+import catchAsync from '../../utils/catchAsync'
 import sendResponse from '../../utils/sendResponse'
-import { AuthServices } from './auth.services'
-import { catchAsync } from '../../utils/catchAsync'
-import config from '../../config'
+import { AuthServices } from './auth.service'
 
 const signup = catchAsync(async (req, res) => {
   const result = await AuthServices.signup(req.body)
