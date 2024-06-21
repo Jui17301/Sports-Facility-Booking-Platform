@@ -57,9 +57,7 @@ const updateFacility = catchAsync(async (req, res) => {
       statusCode: httpStatus.OK,
       success: true,
       message: 'Facility updated Successfully',
-      data:
-      result
-      
+      data:result     
     })
   } catch (error) {
     // send response

@@ -1,3 +1,4 @@
+
 import { ErrorRequestHandler } from 'express'
 import { ZodError } from 'zod'
 
@@ -10,7 +11,8 @@ import { TErrorSources } from '../interface/error.interface'
 import config from '../config'
 
 
-const globalErrorHandler: ErrorRequestHandler = (error, req, res) => {
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+const globalErrorHandler: ErrorRequestHandler = (error, req, res,next) => {
   // setting default values
   let statusCode = 500
   let message = 'Something went wrong'
