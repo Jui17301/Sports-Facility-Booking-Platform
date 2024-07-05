@@ -2,9 +2,9 @@ import express, { Application, Request,Response } from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import router from './app/routes'
-import { BookingControllers } from './app/modules/booking/booking.controller'
 import globalErrorHandler from './app/middlewares/globalErrorHandler'
 import NotFound from './app/middlewares/notFound'
+import { BookingControllers } from './app/modules/booking/booking.controller'
 import path from 'path'
 
 const app: Application = express()
