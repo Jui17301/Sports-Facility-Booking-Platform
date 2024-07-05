@@ -1,6 +1,5 @@
 import express, { Application, Request,Response } from 'express'
 import cors from 'cors'
-
 import cookieParser from 'cookie-parser'
 import router from './app/routes'
 import { BookingControllers } from './app/modules/booking/booking.controller'
