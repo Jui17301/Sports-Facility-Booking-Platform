@@ -5,7 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createToken = void 0;
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const createToken = (jwtPayload, secret, expiresIn) => {
+const createToken = (jwtPayload, secret, 
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+expiresIn) => {
     return jsonwebtoken_1.default.sign(jwtPayload, secret, {
         expiresIn: '1d'
     });

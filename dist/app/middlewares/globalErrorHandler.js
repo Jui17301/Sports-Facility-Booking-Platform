@@ -10,7 +10,8 @@ const handleCastError_1 = __importDefault(require("../errors/handleCastError"));
 const handleDuplicateError_1 = __importDefault(require("../errors/handleDuplicateError"));
 const AppError_1 = __importDefault(require("../errors/AppError"));
 const config_1 = __importDefault(require("../config"));
-const globalErrorHandler = (error, req, res) => {
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+const globalErrorHandler = (error, req, res, next) => {
     // setting default values
     let statusCode = 500;
     let message = 'Something went wrong';
